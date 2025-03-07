@@ -113,3 +113,17 @@ MLflow server is accessible at http://localhost:5000
 ### Custom Templates
 
 Add your own templates to the `ML_TEMPLATES` dictionary in `app.py`.
+
+
+## How to use the project
+
+## For direct training without evolution:
+
+run_train.bat --dataset dataset_fixed.jsonl --batch_size 4 --epochs 3
+
+## For running the genetic algorithm:
+
+run_evolution.bat --population_size 10 --generations 5
+## For inference with a trained model:
+
+python run_inference.py --adapter_path ./results/epoch_3 --interactive
